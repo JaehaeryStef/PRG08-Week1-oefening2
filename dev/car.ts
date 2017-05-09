@@ -13,7 +13,7 @@ class Car {
         this.div = document.createElement("car");
         container.appendChild(this.div);
 
-        this.speed = 4;
+        this.speed = 44;
 
         // hier een keypress event listener toevoegen. een keypress zorgt dat braking true wordt
         //
