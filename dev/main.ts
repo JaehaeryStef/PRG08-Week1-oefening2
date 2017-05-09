@@ -10,6 +10,7 @@ class Game {
     }
 
     private gameLoop(){
+        this.car.move();
         requestAnimationFrame(() => this.gameLoop());
     }
 

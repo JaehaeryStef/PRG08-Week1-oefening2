@@ -1,10 +1,12 @@
 /// <reference path="wheel.ts"/>
 
-class Car {
+class Car{
 
     private speed:number;
     private div:HTMLElement;
     private braking:boolean;
+    private x: number;
+    
             
     constructor() {
         // het DOM element waar de div in geplaatst wordt:
@@ -13,7 +15,8 @@ class Car {
         this.div = document.createElement("car");
         container.appendChild(this.div);
 
-        this.speed = 44;
+        this.speed = 4;
+        this.x = 10;
 
         // hier een keypress event listener toevoegen. een keypress zorgt dat braking true wordt
         //
@@ -21,9 +24,12 @@ class Car {
         // alvast goed zetten
 
         this.move();
+        this.x++;
     }
 
     public move():void {
+       this.x = this.speed + this.x;
+        
         // hier de snelheid verlagen als we aan het afremmen zijn
         //
 
@@ -34,7 +40,7 @@ class Car {
         //
         
         // tekenen
-        this.div.style.transform ="translate(200px,220px)";
+        this.div.style.transform ="translate(" + this.x + "px,220px)";
     } 
 
     //

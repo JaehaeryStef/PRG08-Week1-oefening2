@@ -13,10 +13,13 @@ var Car = (function () {
         this.div = document.createElement("car");
         container.appendChild(this.div);
         this.speed = 4;
+        this.x = 10;
         this.move();
+        this.x++;
     }
     Car.prototype.move = function () {
-        this.div.style.transform = "translate(200px,220px)";
+        this.x = this.speed + this.x;
+        this.div.style.transform = "translate(" + this.x + "px,220px)";
     };
     return Car;
 }());
@@ -28,6 +31,7 @@ var Game = (function () {
     }
     Game.prototype.gameLoop = function () {
         var _this = this;
+        this.car.move();
         requestAnimationFrame(function () { return _this.gameLoop(); });
     };
     Game.prototype.endGame = function () {
