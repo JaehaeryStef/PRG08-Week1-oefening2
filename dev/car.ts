@@ -28,7 +28,7 @@ class Car{
     }
 
     public move():void {
-       this.x = this.speed + this.x;
+        this.x = this.speed + this.x;
         
         // hier de snelheid verlagen als we aan het afremmen zijn
         //
