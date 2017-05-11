@@ -15,7 +15,7 @@ class Game {
     }
 
     public endGame(){
-        document.getElementById("score").innerHTML = "Score : 0";
+        document.getElementById("score").innerHTML = "Score : 10";
     }
 } 
 
